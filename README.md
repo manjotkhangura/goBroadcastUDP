@@ -18,7 +18,7 @@ message =>
 NOTE: The server will only bind to NON-localhost, IPv4 , broadcast enabled net.Interfaces
 
 ## Client
-The client.go has a quick way to send a broadcast on any particular network, and bind the local address to the DialUDP function. This is only necessary if the client has more than 1 NIC. 
+The clientBcast.go has a quick way to send a broadcast on any particular network, and bind the local address to the DialUDP function. This is only necessary if the client has more than 1 NIC. 
 
 
 checkout the sample test here and run it: 
@@ -29,5 +29,8 @@ $ cd goBroadcastUDP; export GOPATH=$PWD;
 $ go run src/github.com/hupla/main/server.go
 
 (change the src in client.go variables ipLocal and ipBcast to meet your local server/client test needs)
-$ go run src/github.com/hupla/main/client.go
+$ go run src/github.com/hupla/main/clientBcast.go
+
+You can also test if the server can also receive unicast messages using this client. Make sure you configure the same port in config.go (UPort) for the remote address on which the server is listening. 
+$ go run src/github.com/hupla/main/clientUcast.go
 ```
