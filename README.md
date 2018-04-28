@@ -6,10 +6,12 @@ There is some good documents out there that give a bare minimum example on how t
 ## Server
 I have written a server.go and a client.go that demonstrate usage of a utility function that shows how this can work. The utility server.go will bind to 0.0.0.0:<port> and query all NIC at time of startup. When the server receives any broadcast packets from the network, it will query the previously cached IPNet collection, and identify what net.Interface it was originally transmitted from. It returns stdout a 
 
-hex.Dump() of the message
-the remote address info of the client
-message => `the client sent a broadcast message on interface: en0`:   
-identifying what interface the message was received on.  
++ hex.Dump() of the message
++ the remote address info of the client
+message => 
+`the client sent a broadcast message on interface: en0`  
++ identifying what interface the message was received on.  
+
 NOTE: The server will only bind to NON-localhost, IPv4 , broadcast enabled net.Interfaces
 
 ## Client
