@@ -22,9 +22,9 @@ checkout the sample test here and run it: 
 
 ```
 $ git clone https://github.com/dfense/goBroadcastUDP
-$ cd broadcast; export GOPATH=$PWD;
-$ go run src/bitbucket.org/smartcast/main/server.go
+$ cd goBroadcastUDP; export GOPATH=$PWD;
+$ go run src/github.com/hupla/main/server.go
 
-(change the ipLocal and ipBcast to meet your local server/client test needs)
-$ go run src/bitbucket.org/smartcast/main/client.go
+(change the src in client.go variables ipLocal and ipBcast to meet your local server/client test needs)
+$ go run src/github.com/hupla/main/client.go
 ```
